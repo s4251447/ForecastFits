@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet"> <!--The imported fonts-->
+    <link rel="stylesheet" href="style.css"> <!--links the css to get styles for buttons and images-->
+    <title>ForecastFits</title> <!--Title of the Website-->
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="search-box"> <!--The button that is clicked to search the website and the temperature from the location you have displayed-->
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter Your Location">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found"> <!--When the location is either not displayed or an invalid location from the weather API data-->
+            <img src="images/404.png">
+            <p>Invalid Location, Please Try Again!</p>
+        </div>
+
+        <div class="weather-box"> <!--When location is granted weather box, details, and wind data and symbols are shown-->
+            <img src="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity:</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed:</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="recommend-button" onclick="window.location.href='clothing.html'">Find Recommended Clothing</button> <!--This button will display after location is granted to recommend clothes from the location you have provided to the software-->
+    </div>
+
+    <script src="https://kit.fontawesome.com/657cae67ca.js" crossorigin="anonymous"></script>
+    <script src="config.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
